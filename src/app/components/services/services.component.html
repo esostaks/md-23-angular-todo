@@ -1,0 +1,15 @@
+<div class="container">
+    <li class='list container' *ngFor="let service of services">
+        <div class="item_box" [style.backgroundColor]="service.color" (click)="selectItem(service)">
+            <span class="name">{{service.name}}</span>
+            <span class="price">${{service.price}}</span>
+        </div>
+    </li>
+    <div  class="container">
+        <hr class="line">
+    </div>
+    <div class="total_box">
+        <span class="name">Total:</span>
+        <span class="price">${{totalPrice}}</span>
+    </div>
+</div>
